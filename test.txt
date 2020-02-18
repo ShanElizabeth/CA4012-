@@ -1,0 +1,1 @@
+this is shannon's test file for lab two for statitical machine translation, this will add spaces between, commas,words and apostraphie's.!
