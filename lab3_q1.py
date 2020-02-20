@@ -3,8 +3,6 @@ with open ('text3.txt','r') as file:
 	for line in file:
 		a=line.split(' ')
 
-
-
 def one_gram(a):
 	return (a)
 
