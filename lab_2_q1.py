@@ -1,7 +1,8 @@
 import nltk
 from nltk.tokenize import word_tokenize
-
-with open ('test.txt','r') as file:
+tokenfile=[]
+with open ('Eng_test.txt','r') as file,open('Eng_token.txt','w') as token:
 	
 	for line in file:
-		print(word_tokenize(line))
+		tokenfile=(word_tokenize(line))
+		print(tokenfile)
