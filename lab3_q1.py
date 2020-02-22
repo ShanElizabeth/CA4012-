@@ -30,4 +30,3 @@ print(one_gram(a))
 print(two_gram(a))
 print(three_gram(a))
 print(four_gram(a))
-
