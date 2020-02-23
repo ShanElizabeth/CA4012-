@@ -3,6 +3,8 @@ with open ('text3.txt','r') as file:
 	a=[]
 	for line in file:
 		a=line.split(' ')
+
+#######referebces
 r1=['the','gunman','was','shot','to','death','by','the','police','.']
 r2=['the','gunman','was','shot','to','death','by','the','police','.']
 r3=['police','killed','the','gunman','.']
@@ -29,7 +31,7 @@ def token_twogramrefs(refs):
 				#print(lst[j]+' '+lst[j+1])
 	return newrefs
 
-def token_threegrams(refs):
+def token_threegramsrefs(refs):
 	newrefs=[]
 	for lst in refs:
 		#print(lst)
@@ -112,7 +114,7 @@ def match_twogram(a,refs):
 def match_threegram(a,refs):
 	score=0
 	t=three_gram(a)
-	newrefs=three_gram(refs)
+	newrefs=token_threegramsrefs(refs)
 	for word in t:
 		if word in newrefs:
 			#print(word)
@@ -126,7 +128,7 @@ def match_threegram(a,refs):
 def match_fourgram(a,r):
 	score=0
 	t=four_gram(a)
-	newrefs=four_gram(refs)
+	newrefs=token_fourgramrefs(refs)
 
 	for word in t:
 		if word in newrefs:
@@ -134,6 +136,7 @@ def match_fourgram(a,r):
 			score+=1
 	return (score/len(t))
 #####getting average ken of all references 
+
 def ref_average(refs):
 	score=0
 	#return(len(refs))
@@ -150,7 +153,7 @@ def brevity_penalty(a,refs):
 	#print(rounded_avg)
 	return(len(a)/(rounded_avg))
 
-###########################
+############################
 #calculating ngram score
 n_gramscore=(
 	(match_onegram(a,refs))*
