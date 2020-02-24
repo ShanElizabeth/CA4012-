@@ -56,7 +56,6 @@ def token_fourgramrefs(refs):
 #######################
 
 
-
 #####################
 #MT OUTPUT NGRAM
 def one_gram(a):
@@ -161,6 +160,10 @@ n_gramscore=(
 	(match_threegram(a,refs))*
 	(match_fourgram(a,refs)))
 
+print(match_onegram(a,refs))
+print(match_twogram(a,refs))
+print(match_threegram(a,refs))
+print(match_fourgram(a,refs))
 ######### to the power of 1/4 because 4 n grams
 n_gramscore=n_gramscore**0.25
 

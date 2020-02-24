@@ -2,7 +2,7 @@ with open ('text3.txt','r') as file:
 	a=[]
 	for line in file:
 		a=line.split(' ')
-r=['the','gunman','was','shot','dead','by','the','police','.']
+
 def one_gram(a):
 	return (a)
 
