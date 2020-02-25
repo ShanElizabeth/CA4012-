@@ -9,7 +9,7 @@ r1=['the','gunman','was','shot','to','death','by','the','police','.']
 r2=['the','gunman','was','shot','to','death','by','the','police','.']
 r3=['police','killed','the','gunman','.']
 r4=['the','gunman','was','shot','dead','by','the','police','.']
-
+r5=['the','gunman','was','shot','to','death','because','of','the','police','.']
 refs=[r1,r2,r3,r4]
 
 ############################
@@ -54,7 +54,6 @@ def token_fourgramrefs(refs):
 
 #END OF REFERNCE N-GRAMS
 #######################
-
 
 
 #####################
@@ -151,7 +150,7 @@ def brevity_penalty(a,refs):
 	rounded_avg=math.ceil(newrefs_len_avg)
 	#print(len(a))
 	#print(rounded_avg)
-	return(len(a)/(rounded_avg))
+	return(min(1,(len(a)/(rounded_avg))))
 
 ############################
 #calculating ngram score
@@ -160,6 +159,7 @@ n_gramscore=(
 	(match_twogram(a,refs))*
 	(match_threegram(a,refs))*
 	(match_fourgram(a,refs)))
+
 
 ######### to the power of 1/4 because 4 n grams
 n_gramscore=n_gramscore**0.25

@@ -13,7 +13,7 @@ with open('Eng_test.txt','r') as file:
 		line.rstrip("\n")
 		tokenfile.append((re.findall(r'(\'|,|!|\?|[\w]+)', line)))
 print (tokenfile)
-for lst in tokenfile:
+for i in range(0,len())
 	print(" ".join(lst))
 	if len(lst)>4:
 		print("too long")
