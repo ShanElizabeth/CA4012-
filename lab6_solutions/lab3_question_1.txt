@@ -1,0 +1,6 @@
+16304263
+Shannon Mulgrew
+The basic idea of Expectation Maimisation (EM) algorithm is to find the  estimate probabilties for missing data from completed data provided. You then estimte values for missing data and then optimise it. You repeat these two steps until you reach convergence.
+
+
+
